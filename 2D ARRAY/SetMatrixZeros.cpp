@@ -7,7 +7,7 @@ void print(int arr[3][3])
     {
         for (int j = 0; j < 3; j++)
         {
-            cout << arr[i][j];
+            cout << arr[i][j] << " ";
         }
         cout << " " << endl;
     }
@@ -40,11 +40,12 @@ int setZeros(int arr[3][3])
 }
 int main()
 {
-    int array[3][3] = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-    cout << "Printing a initail array-----> " << endl;
+    int array[3][3] = {{1, 1, 1}, {1, 1, 1}, {1, 0, 1}};
+    cout << "initial array before adding zero's" << endl;
 
     print(array);
     setZeros(array);
+    cout << "final array after adding zero's" << endl;
     print(array);
     return 0;
 }
