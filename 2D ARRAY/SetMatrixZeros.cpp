@@ -29,6 +29,7 @@ int setZeros(int arr[3][4])
                 cout << "value of i and j" << i << j << endl;
                 break;
             }
+            continue;
         }
     }
     for (int m = 0; m < 4; m++)
