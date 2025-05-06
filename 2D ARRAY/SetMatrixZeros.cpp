@@ -13,36 +13,44 @@ void print(int arr[3][4])
     }
 }
 // setZero function....
-int setZeros(int arr[3][4])
+void setZeros(int arr[3][4])
 {
-
-    int zero_i;
-    int zero_j;
+    // initaiallize a copy array
+    int copyarr[3][4];
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 4; ++j)
+        {
+            copyarr[i][j] = arr[i][j];
+        }
+    }
+    // this the logic for finding zero index and setting row and columns accordingly....
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 4; j++)
         {
             if (arr[i][j] == 0)
             {
-                zero_i = i;
-                zero_j = j;
                 cout << "value of i and j" << i << j << endl;
-                break;
+                for (int m = 0; m < 4; m++)
+                {
+                    copyarr[i][m] = 0;
+                }
+                for (int n = 0; n < 3; n++)
+                {
+                    copyarr[n][j] = 0;
+                }
             }
-            continue;
         }
     }
-    for (int m = 0; m < 4; m++)
+    // setback copy to original....
+    for (int i = 0; i < 3; ++i)
     {
-        arr[zero_i][m] = 0;
-        // 00,01,02,03   sideways
+        for (int j = 0; j < 4; ++j)
+        {
+            arr[i][j] = copyarr[i][j];
+        }
     }
-    for (int n = 0; n < 3; n++)
-    {
-        arr[n][zero_j] = 0;
-        // 00,10,20,30 down
-    }
-    // cout << "Value of i and j " << zero_i << zero_j << endl;
 }
 int main()
 {
