@@ -95,6 +95,14 @@ void printLinkedList(Node *&head)
     }
     cout << endl;
 }
+
+void reversedLinkedlist(Node *&head)
+{
+    // pass
+    Node *dummy = NULL;
+    Node *Next = head->next;
+    while ()
+}
 // ...................//.................///...............//
 main()
 {
