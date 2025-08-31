@@ -224,16 +224,16 @@ int main()
     cout << "Traversing binary search tree" << endl;
     levelOrderTraversal(root);
 
-    cout << "Printing Inorder---->" << endl;
-    Inorder(root);
-    cout << endl;
+    // cout << "Printing Inorder---->" << endl;
+    // Inorder(root);
+    // cout << endl;
 
-    root = deleteNode(root, 50);
-    cout << "Traversing binary search tree" << endl;
-    levelOrderTraversal(root);
+    // root = deleteNode(root, 50);
+    // cout << "Traversing binary search tree" << endl;
+    // levelOrderTraversal(root);
 
-    cout << "Printing Inorder---->" << endl;
-    Inorder(root);
+    // cout << "Printing Inorder---->" << endl;
+    // Inorder(root);
 
     // cout << "maxValue of BST --> ";
     // cout << maxVal(root);
